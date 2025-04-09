@@ -4,16 +4,21 @@ import { AppComponent } from './app.component';
 import { DefautlLoginLayoutComponent } from './components/defautl-login-layout/defautl-login-layout.component';
 import { LoginComponent } from './pages/login/login.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { PrimaryInputComponent } from './components/primary-input/primary-input.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     DefautlLoginLayoutComponent,
-    LoginComponent
+    LoginComponent,
+    PrimaryInputComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

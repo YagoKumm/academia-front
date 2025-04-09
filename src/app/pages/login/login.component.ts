@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { DefautlLoginLayoutComponent } from 'src/app/components/defautl-login-layout/defautl-login-layout.component';
 
 @Component({
@@ -8,4 +9,20 @@ import { DefautlLoginLayoutComponent } from 'src/app/components/defautl-login-la
 })
 export class LoginComponent {
 
+  loginForm!: FormGroup;
+
+  constructor(){
+    this.loginForm = new FormGroup({
+      email: new FormControl('', [Validators.required, Validators.email]),
+      password: new FormControl('', [Validators.required, Validators.minLength(6)])
+    })
+  }
+
+  get emailControl(): FormControl {
+    return this.loginForm.get('email') as FormControl;
+  }
+
+  get passwordControl(): FormControl {
+    return this.loginForm.get('password') as FormControl;
+  }
 }

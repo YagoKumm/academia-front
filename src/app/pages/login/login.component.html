@@ -3,4 +3,22 @@
   primaryButtom="Entrar"
   secondButtom="Cadastra-se"
 >
+  <form [formGroup]="loginForm">
+    <app-primary-input
+    [formName]="emailControl"
+    label="E-mail"
+    placeholder="Digite seu e-mail"
+    type="email"
+    >
+      <img src="/assets/svg/email-icon.svg" alt="">
+    </app-primary-input>
+    <app-primary-input
+    [formName]="passwordControl"
+    label="Senha"
+    placeholder="Digite sua senha"
+    type="password"
+  >
+    <img src="/assets/svg/password-icon.svg" />
+  </app-primary-input>
+  </form>
 </app-defautl-login-layout>
