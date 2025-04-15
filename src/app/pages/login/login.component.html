@@ -2,10 +2,14 @@
   title="Faça seu login"
   primaryButtom="Entrar"
   secondButtom="Cadastra-se"
+  (submit)="submit()"
+  (navigate)="navigate()"
+  [disablePrimaryBtn]="!loginForm.valid"
 >
   <form [formGroup]="loginForm">
     <app-primary-input
-    [formName]="emailControl"
+    formControlName="email"
+    ínputName="email"
     label="E-mail"
     placeholder="Digite seu e-mail"
     type="email"
@@ -13,12 +17,14 @@
       <img src="/assets/svg/email-icon.svg" alt="">
     </app-primary-input>
     <app-primary-input
-    [formName]="passwordControl"
+    formControlName="password"
+    inputName="password"
     label="Senha"
     placeholder="Digite sua senha"
     type="password"
   >
     <img src="/assets/svg/password-icon.svg" />
   </app-primary-input>
+  <span>Esqueceu sua senha?</span>
   </form>
 </app-defautl-login-layout>
