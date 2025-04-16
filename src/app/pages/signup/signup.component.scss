@@ -1,0 +1,14 @@
+@import "/src/styles/varibles.scss";
+
+form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 24px;
+
+}
+
+.signup-form {
+  margin-top: -40px; 
+}
