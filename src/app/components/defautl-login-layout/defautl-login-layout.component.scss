@@ -20,8 +20,29 @@ main{
     gap: 8px;
     flex-grow: 1;
     background-color: $gray-color;
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
+    h2 {
+      margin-bottom: 0px !important;
+      padding-bottom: 0px !important;
+      line-height: 1 !important;
+    }
+
+    .main-image {
+      margin-top: -55px !important; // pode ajustar esse valor para aproximar ainda mais
+    }
   }
+
+  h2{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 45px;
+  }
+
 
   .form-section{
     width: 30%;
@@ -30,11 +51,6 @@ main{
 
 
 
-    h2{
-      font-size: 20px;
-      font-weight: bold;
-      margin-bottom: 45px;
-    }
   }
 
   .button-wrapper{
@@ -93,16 +109,16 @@ main{
   }
 
   .login-logo {
-    width: 15%;  // Define um tamanho grande para a imagem principal
-    max-width: 600px;  // Garante que não fique exageradamente grande
-    height: auto;  // Mantém a proporção
+    width: 15%;
+    max-width: 600px;
+    height: auto;
 
   }
 
   .main-image {
-    width: 597px;  // Define um tamanho grande para a imagem principal
-    max-width: 600px;  // Garante que não fique exageradamente grande
-    height: 534px;  // Mantém a proporção
+    width: 597px;
+    max-width: 600px;
+    height: 534px;
   }
 }
 
