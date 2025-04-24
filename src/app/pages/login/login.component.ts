@@ -35,13 +35,17 @@ export class LoginComponent {
 
   submit(){
     this.loginService.login(this.loginForm.value.email, this.loginForm.value.password).subscribe({
-      next: () => this.toastr.success("Login feito com sucesso!"),
-      error: () => this.toastr.error("Erro inesperado! Tente novamente mais tarde")
-    })
+      next: () => {
+        this.toastr.success("Login feito com sucesso!"),
+        this.router.navigate(["/user"])
+      },
+      error: () => {
+        this.toastr.error("Erro inesperado! Tente novamente mais tarde")
+      }
+    });
   }
 
   navigate(){
     this.router.navigate(["/signup"])
   }
-
 }
